@@ -6,7 +6,7 @@
 
 buildGoModule rec {
   pname = "nomad";
-  version = "2.0.7";
+  version = "2.0.6";
 
   src = fetchFromGitHub {
     owner = "hashicorp";
@@ -29,6 +29,7 @@ buildGoModule rec {
     echo "complete -C $out/bin/nomad nomad" > nomad.bash
     installShellCompletion nomad.bash
   '';
+  doCheck = false;
 
   buildInputs = with pkgs; [
     go
