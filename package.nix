@@ -6,16 +6,16 @@
 
 buildGoModule rec {
   pname = "nomad";
-  version = "2.1.0";
+  version = "2.1.1";
 
   src = fetchFromGitHub {
     owner = "hashicorp";
     repo = "nomad";
     rev = "v${version}";
     fetchSubmodules = true;
-    sha256 = "sha256-x0DP2F6Iko1q+OdwNBHeX5pGnR9/Fwe4U2kcSihFyp0=";
+    sha256 = "sha256-Cv6fe8AKNuTNAJYmNI6mgxP9NvVzGizZIYbUVVm8Olw=";
   };
-  vendorHash = "sha256-J8zt2eEdRqu/tpYvfvgPRaa/cCJfUvqf6HNEfbvk0l4=";
+  vendorHash = "sha256-d8PfBcwz/7Pi6nRhnKNpRkCDxqXMzw9graSa4AkB76A=";
 
   subPackages = [ "." ];
   tags = [ "ui" ];
